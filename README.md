@@ -42,8 +42,7 @@ Schwedter Str. 8/9b, 10119 Berlin
 
 https://www.heinlein-support.de
 
-Tel: 030 / 405051-46
-Fax: 030 / 405051-19
+Tel: 030 / 405051-10
 
 Amtsgericht Berlin-Charlottenburg - HRB 93818 B
 Geschäftsführer: Peer Heinlein - Sitz: Berlin
