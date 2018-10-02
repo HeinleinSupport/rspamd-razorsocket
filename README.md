@@ -2,6 +2,10 @@
 
 Small Perl Daemon to use Razor2 over TCP Sockets. Mainly to use Razor2 with Rspamd.
 
+## State of Development
+
+This Daemon is working but not production ready. Even a discreate configuration file is missing. So stay tuned or send PR's ;)
+
 ## Razor2
 
 [http://razor.sourceforge.net/](http://razor.sourceforge.net)
