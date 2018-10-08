@@ -1,13 +1,17 @@
 [Unit]
 Description=Razor Socket Service
+Requires=network.target local-fs.target time-sync.target
 
 [Service]
 Type=simple
+User=razorsocket
+Group=razorsocket
+
+Environment="RAZOR_SOCKET_LISTEN=127.0.0.1 9192"
+ExecStart=/usr/bin/razorsocket $RAZOR_SOCKET_LISTEN
+
 Restart=always
 RestartSec=3
-ExecStart=/usr/local/bin/razorsocket
-
-User=razorsocket
 NoNewPrivileges=true
 PrivateDevices=true
 PrivateTmp=true

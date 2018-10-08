@@ -25,14 +25,14 @@ use Razor2::Client::Agent;
 
 # set to 1 to enable debug logging
 my $debug 	= 1;
-# razorsocket log file path
-my $logfile 	= "/tmp/razorsocket.log";
 # max number of threa to use
 my $maxthreads 	= 2000;
 # bind razorsocket to a local ip address - use 0.0.0.0 for all
 my $bindaddress = '127.0.0.1';
 # tcp port to use
 my $bindport 	= '9192';
+
+my ($bindaddress,$bindport) = @ARGV;
 
 
 my $agent = new Razor2::Client::Agent('razor-check') or die ;
@@ -114,11 +114,9 @@ sub clientHandler
 
 sub ErrorLog {
 setlocale(&POSIX::LC_ALL, "en_US");
-	my $msg = shift;
-	my $datestring = strftime "%b %e %H:%M:%S", localtime;
-	open(LOG,">>$logfile");
-		print LOG $datestring." ".$msg."\n";
-	close(LOG);
+  my $msg = shift;
+  my $datestring = strftime "%b %e %H:%M:%S", localtime;
+  print STDERR $datestring." ".$msg."\n";
 }
 
 # Start the Main loop
